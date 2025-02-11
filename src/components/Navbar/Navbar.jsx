@@ -61,11 +61,11 @@ const Navbar = ({
 
   let additionalText = ""
   if (location.pathname.includes("faux-men")) {
-    additionalText = "Men"
+    additionalText = "MEN"
   } else if (location.pathname.includes("faux-women")) {
-    additionalText = "Women"
+    additionalText = "WOMEN"
   } else if (location.pathname.includes("faux-kids")) {
-    additionalText = "Kids"
+    additionalText = "KIDS"
   }
 
   const handleScroll = (refKey) => {
