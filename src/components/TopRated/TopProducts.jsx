@@ -36,7 +36,7 @@ const TopProducts = ({ handleOrderPopup }) => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container mb-5">
         {/* Header */}
         <div>
           <div className="text-left mb-24 ml-7">

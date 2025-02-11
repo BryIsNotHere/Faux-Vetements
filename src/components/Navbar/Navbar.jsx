@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom"
 import DarkMode from "./DarkMode"
 import { IoMdSearch } from "react-icons/io"
 import { FaCartShopping, FaCaretDown } from "react-icons/fa6"
@@ -18,17 +19,17 @@ const Menu = [
   {
     id: 3,
     name: "For Kids",
-    link: "/#",
+    link: "/faux-kids",
   },
   {
     id: 4,
     name: "For Men",
-    link: "/#",
+    link: "/faux-men",
   },
   {
     id: 5,
     name: "For Women",
-    link: "/#",
+    link: "/faux-women",
   },
 ]
 
@@ -45,7 +46,28 @@ const DropdownLinks = [
   },
 ]
 
-const Navbar = ({ handleOrderPopup, scrollToSection, showTopRated, showTrending }) => {
+const Navbar = ({
+  handleOrderPopup,
+  scrollToSection,
+  showTopRated,
+  showTrending,
+}) => {
+  const location = useLocation()
+
+  const isFauxPage =
+    location.pathname.includes("faux-men") ||
+    location.pathname.includes("faux-women") ||
+    location.pathname.includes("faux-kids")
+
+  let additionalText = ""
+  if (location.pathname.includes("faux-men")) {
+    additionalText = "Men"
+  } else if (location.pathname.includes("faux-women")) {
+    additionalText = "Women"
+  } else if (location.pathname.includes("faux-kids")) {
+    additionalText = "Kids"
+  }
+
   const handleScroll = (refKey) => {
     if (refKey && scrollToSection[refKey]?.current) {
       const yOffset = scrollToSection[refKey].current.offsetTop
@@ -66,9 +88,18 @@ const Navbar = ({ handleOrderPopup, scrollToSection, showTopRated, showTrending 
       <div className="bg-primary/40 py-2">
         <div className="container flex justify-between items-center">
           <div>
-            <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
-              Faux Vêtements
-            </a>
+            {!isFauxPage && (
+              <a href="/" className="font-bold text-2xl sm:text-3xl flex gap-2">
+                Faux Vêtements
+              </a>
+            )}
+
+            {isFauxPage && (
+              <a href="/" className="font-bold text-2xl sm:text-3xl flex gap-2">
+                Faux
+                <span className="text-sm">{` ${additionalText}`}</span>
+              </a>
+            )}
           </div>
 
           <div className="flex justify-between items-center gap-2">
@@ -131,7 +162,7 @@ const Navbar = ({ handleOrderPopup, scrollToSection, showTopRated, showTrending 
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180 group-hover:text-primary" />
                   </span>
                 </a>
-                <div className="absolute x-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black">
+                <div className="absolute x-[9999] hidden group-hover:block w-[150px] rounded-md bg-white dark:bg-gray-900 dark:text-white p-2 text-black">
                   <ul>
                     {DropdownLinks.map((data) => (
                       <li key={data.id}>

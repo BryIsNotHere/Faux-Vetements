@@ -1,29 +1,29 @@
-import image1 from "../../assets/hero/girl-model.png"
-import image2 from "../../assets/hero/male-model.png"
-import image3 from "../../assets/hero/kids-model.png"
+import image1 from "../../assets/hero/faux-women-model-1.png"
+import image2 from "../../assets/hero/faux-women-model-2.png"
+import image3 from "../../assets/hero/faux-women-model-3.png"
 import Slider from "react-slick"
 
 const ImageList = [
   {
     id: 1,
     img: image1,
-    title: "Buy 1 Get 1 Free – Your First Purchase Bonus!",
+    title: "Effortless Elegance with Our Casual Collection",
     description:
-      "Enjoy a special BOGO deal on selected items. Don’t miss out on this exclusive first-time shopper reward!",
+      "Embrace simplicity and style with outfits perfect for every day.",
   },
   {
     id: 2,
     img: image2,
-    title: "Up to 20% OFF – Men's Wear Sale!",
+    title: "Upgrade Your Wardrobe with Premium Jackets",
     description:
-      "Get stylish with premium men's fashion at discounted prices. Available across Southeast Asia with Free Shipping!",
+      "Stay warm and stylish with our premium jackets, designed for comfort and quality.",
   },
   {
     id: 3,
     img: image3,
-    title: "Free Shipping on All Kids' Wear!",
+    title: "Elevate Your Workout Look with Our Sporty Styles",
     description:
-      "Shop the latest kids' fashion with no shipping fees—only in Southeast Asia. Limited-time offer!",
+      "Achieve peak performance while looking chic with our sporty collection.",
   },
 ]
 
@@ -44,7 +44,7 @@ const Hero = ({ handleOrderPopup }) => {
 
   return (
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200">
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-12 -z[8]"></div>
 
       <div className="container pb-8 sm:pb-0 ml-8">
         <Slider {...settings}>
@@ -89,7 +89,7 @@ const Hero = ({ handleOrderPopup }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-100 lg:scale-100 object-contain mx-auto"
+                      className="w-[600px] h-[600px] sm:h-[450px] sm:w-[450px] sm:scale-100 lg:scale-110 object-contain mx-auto"
                     />
                   </div>
                 </div>

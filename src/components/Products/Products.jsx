@@ -1,21 +1,12 @@
 import { useState } from "react"
-import oversizedImg from "../../assets/products/oversized-tee-model.jpg"
-import oversizedImgAlt from "../../assets/products/oversized-tee-model-alt.jpg"
-import hoodieImg from "../../assets/products/hoodie-model.jpg"
-import hoodieImgAlt from "../../assets/products/hoodie-model-alt.jpg"
-import knitwearImg from "../../assets/products/knitwear-model.jpg"
-import knitwearImgAlt from "../../assets/products/knitwear-model-alt.jpg"
-import cropImg from "../../assets/products/crop-model.jpg"
-import cropImgAlt from "../../assets/products/crop-model-alt.jpg"
-import poloImg from "../../assets/products/polo-model.jpg"
-import poloImgAlt from "../../assets/products/polo-model-alt.jpg"
+import { fauxWomenImages, fauxMenImages } from "../../assets/image/images"
 import { FaStar } from "react-icons/fa6"
 
 const ProductsData = [
   {
     id: 1,
-    img: oversizedImg,
-    imgAlt: oversizedImgAlt,
+    img: fauxWomenImages.oversizedImg,
+    imgAlt: fauxWomenImages.oversizedImgAlt,
     title: "Oversized Tee",
     rating: 5.0,
     color: "White",
@@ -23,8 +14,8 @@ const ProductsData = [
   },
   {
     id: 2,
-    img: hoodieImg,
-    imgAlt: hoodieImgAlt,
+    img: fauxMenImages.hoodieImg,
+    imgAlt: fauxMenImages.hoodieImgAlt,
     title: "Hoodie",
     rating: 4.0,
     color: "Black",
@@ -32,8 +23,8 @@ const ProductsData = [
   },
   {
     id: 3,
-    img: knitwearImg,
-    imgAlt: knitwearImgAlt,
+    img: fauxWomenImages.knitwearImg,
+    imgAlt: fauxWomenImages.knitwearImgAlt,
     title: "Knitwear",
     rating: 4.6,
     color: "Beige",
@@ -41,8 +32,8 @@ const ProductsData = [
   },
   {
     id: 4,
-    img: cropImg,
-    imgAlt: cropImgAlt,
+    img: fauxWomenImages.cropImg,
+    imgAlt: fauxWomenImages.cropImgAlt,
     title: "Y2K Jersey",
     rating: 5.0,
     color: "White",
@@ -50,8 +41,8 @@ const ProductsData = [
   },
   {
     id: 5,
-    img: poloImg,
-    imgAlt: poloImgAlt,
+    img: fauxMenImages.poloImg,
+    imgAlt: fauxMenImages.poloImgAlt,
     title: "Polo Half-Zip",
     rating: 4.5,
     color: "Cream",
@@ -106,7 +97,7 @@ const Products = () => {
             ))}
           </div>
           {/* View Button */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button
               data-aos="fade-up"
               className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-5 rounded-md hover:bg-gray-200 hover:text-primary"
@@ -114,7 +105,7 @@ const Products = () => {
             >
               View All Products
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
