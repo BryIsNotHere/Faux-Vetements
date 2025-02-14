@@ -4,19 +4,11 @@ import { FaMobileAlt } from "react-icons/fa"
 const FooterLinks = [
   {
     title: "Home",
-    link: "/#",
+    link: "/",
   },
   {
     title: "About",
-    link: "/#",
-  },
-  {
-    title: "Contact Us",
-    link: "/#",
-  },
-  {
-    title: "Our Blog",
-    link: "/#",
+    link: "/about",
   },
 ]
 
@@ -69,7 +61,9 @@ const Footer = () => {
                       className="cursor-pointer hover:translate-x-1 duration-300 text-gray-200"
                       key={link.id}
                     >
-                      <span>{link.title}</span>
+                      <a href={link.link}>
+                        <span>{link.title}</span>
+                      </a>
                     </li>
                   ))}
                 </ul>

@@ -26,6 +26,15 @@ import blackDressImg from "../../assets/products/black-dress.jpg"
 import blackDressImgAlt from "../../assets/products/black-dress-alt.jpg"
 import blackTeeKidsImg from "../../assets/products/black-tee-kids.jpg"
 import blackTeeKidsImgAlt from "../../assets/products/black-tee-kids-alt.jpg"
+import aboutUsImg from "../../assets/about-us/about-us-model.jpg"
+import aboutUsMale from "../../assets/about-us/about-us-male.jpg"
+import aboutUsFemale from "../../assets/about-us/about-us-female.jpg"
+
+export const AboutImages = {
+  aboutUsImg,
+  aboutUsMale,
+  aboutUsFemale,
+}
 
 export const fauxWomenImages = {
   oversizedImg,

@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Navbar from "./components/Navbar/Navbar"
 import FauxWomenHero from "./components/Hero/FauxWomenHero"
 import FauxWomenProducts from "./components/Products/FauxWomenProducts"
@@ -11,9 +11,6 @@ import "aos/dist/aos.css"
 
 const FauxWomen = () => {
   const [orderPopup, setOrderPopup] = useState(false)
-
-  const productsRef = useRef(null)
-  const topProductsRef = useRef(null)
 
   const handleOrderPopup = () => {
     setOrderPopup(!orderPopup)
@@ -31,13 +28,7 @@ const FauxWomen = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar
-        handleOrderPopup={handleOrderPopup}
-        scrollToSection={{
-          products: productsRef,
-          topProducts: topProductsRef,
-        }}
-      />
+      <Navbar handleOrderPopup={handleOrderPopup} />
       <FauxWomenHero handleOrderPopup={handleOrderPopup} />
       <FauxWomenProducts />
       <Footer />
